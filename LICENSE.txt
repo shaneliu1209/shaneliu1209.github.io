@@ -1,0 +1,52 @@
+RIGHTS RESERVED NOTICE
+2026 — Personal website
+
+All rights reserved, to the extent applicable.
+
+1. Scope
+
+The owner of this repository reserves all intellectual property rights they
+legally hold in the website's source code, text, visual composition, images,
+videos and other content. Publication in this repository or on the website
+does not grant an open-source or Creative Commons license to that content.
+
+2. No additional reuse permission
+
+Except for the permissions and exceptions below, no permission is granted
+to reproduce, modify, adapt, redistribute, republish, host elsewhere or
+commercially exploit protected content without prior written permission
+from the relevant rights holder. Public availability is not an additional
+license for reuse.
+
+3. Viewing and platform permissions
+
+You may visit the website, view its content through its intended interface,
+and share ordinary links to it. Technical copies made by a browser as
+necessary for normal viewing are permitted.
+
+This notice does not revoke or restrict permissions granted to GitHub,
+its affiliates or other users under the applicable GitHub Terms of Service,
+including the rights associated with viewing and forking a public repository
+and other platform uses permitted by those terms. No additional reuse
+permission is granted by this notice.
+
+4. Third-party materials
+
+Third-party materials remain subject to their own licenses and ownership.
+In particular, the bundled DM Sans and Instrument Serif font files are
+distributed under the SIL Open Font License, Version 1.1. Their copyright
+notices and full licenses are retained in assets-holo-20261007/fonts/ and
+linked from credits.html. This notice does not replace those licenses or
+claim ownership of those materials.
+
+5. Legal limits
+
+This notice reserves only rights that legally exist and are held by the
+repository owner. It does not create copyright in otherwise unprotectable
+material, including purely AI-generated material, or restrict fair use,
+fair dealing or other uses permitted by applicable law. Any protectable
+human-authored selection, arrangement or modifications are covered only
+to the extent of the rights actually held in those contributions.
+
+This is a rights notice, not a claim that every individual element is
+independently protected by copyright, and not a technical download barrier.

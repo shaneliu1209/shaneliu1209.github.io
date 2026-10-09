@@ -1,0 +1,68 @@
+.motion-toolbar {
+  position: relative;
+  z-index: 60;
+  max-width: 1680px;
+  margin: -8px auto 0;
+  padding: 0 56px;
+  display: flex;
+  justify-content: flex-end;
+}
+.motion-preference {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 36px;
+  border: 1px solid #88b0cc40;
+  border-radius: 30px;
+  padding: 7px 12px;
+  background: #0b1420e6;
+  color: #c1d0e1;
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.motion-preference[hidden] { display: none; }
+.motion-preference svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.motion-preference [data-motion-state] { border-left: 1px solid #88b0cc40; padding-left: 9px; color: #8eabc4; }
+.motion-preference[aria-pressed="true"] { border-color: #b3d9e36b; }
+.motion-preference[aria-pressed="true"] [data-motion-state] { color: #c6e9dc; }
+.motion-preference:disabled { cursor: default; opacity: 1; }
+/* Keep a moving card's keyboard focus visible above decorative layers. */
+.life-screen:focus-visible { z-index: 65 !important; opacity: 1 !important; }
+main:focus { outline: none; }
+.motion-preference:focus-visible, .legal-links a:focus-visible, .privacy-copy a:focus-visible {
+  outline: 2px solid #c3e9ff;
+  outline-offset: 5px;
+}
+html.motion-paused, .motion-paused *, .motion-paused *::before, .motion-paused *::after {
+  scroll-behavior: auto !important;
+  animation: none !important;
+  transition: none !important;
+}
+.motion-paused .life-screen:hover .screen-photo { transform: none; }
+.motion-paused .ambient-particles { opacity: .7; }
+.site-footer { flex-wrap: wrap; padding: 24px 0; color: #93a4bf; }
+.legal-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; font-size: 12px; }
+.legal-links a { color: #acbfd4; }
+.legal-links a:hover { color: #e3f3ff; }
+.partnership-note a { text-decoration: underline; text-underline-offset: 3px; color: #c6dbed; }
+.privacy-page { background: radial-gradient(ellipse at 50% 10%, #112133, #05070d 60%); }
+.privacy-copy { max-width: 860px; margin: 54px auto 100px; padding: 0 28px; color: #b6c4d8; line-height: 1.85; }
+.privacy-copy h1 { color: #edf4ff; font-size: clamp(38px, 6vw, 62px); margin-bottom: 16px; }
+.privacy-copy h2 { color: #dfecfa; font-weight: 500; font-size: 22px; margin: 38px 0 12px; }
+.privacy-copy p, .privacy-copy ul { margin: 0 0 18px; }
+.privacy-copy li { margin: 8px 0; }
+.privacy-copy a { color: #b6dffe; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.privacy-copy .privacy-summary { border-left: 2px solid #98c6de; padding: 8px 0 8px 22px; margin: 28px 0 36px; color: #d0ddeb; }
+.privacy-copy .privacy-date { font-size: 13px; color: #95a7be; }
+.privacy-copy .draft-notice { border: 1px solid #d7b57888; padding: 14px 18px; color: #efcea0; border-radius: 8px; }
+@media (max-width: 1280px) { .motion-toolbar { padding: 0 35px; } }
+@media (max-width: 760px) {
+  .site-header nav > a:first-child { display: inline-flex; }
+  .motion-toolbar { padding: 0 22px; margin-top: -5px; }
+  .motion-preference { min-height: 40px; font-size: 11px; }
+  .privacy-copy { margin-top: 30px; font-size: 15px; }
+  .privacy-copy h2 { font-size: 20px; }
+  .legal-links { width: 100%; }
+}

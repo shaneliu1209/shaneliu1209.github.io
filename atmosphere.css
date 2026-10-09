@@ -1,0 +1,90 @@
+/* Isolated design experiment. Loaded by atmosphere.html only. */
+.atmosphere-preview { overflow-x: clip; }
+.atmosphere-preview main { overflow: clip; }
+.atmosphere-preview .site-header {
+  background: radial-gradient(ellipse at 52% 140%, #17313b24, transparent 68%);
+}
+.atmosphere-preview .experience {
+  background: radial-gradient(ellipse 66% 70% at 50% 62%, #0b1722 0%, #080d15 58%, #05070d 100%);
+}
+.atmosphere-preview .experience-ambient {
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 36% 54% at 50% 66%, #74cbe52e, transparent 78%),
+    radial-gradient(ellipse 43% 59% at 25% 68%, #6475ac19, transparent 78%),
+    radial-gradient(ellipse 27% 44% at 81% 64%, #9b79ac17, transparent 83%);
+  mask-image: linear-gradient(transparent, #000 35%, #000 79%, transparent);
+}
+.atmosphere-preview .body-light-halo {
+  background:
+    radial-gradient(ellipse 13% 39% at 50% 50%, #c7f3ff47 0%, #8acee62b 43%, transparent 100%),
+    radial-gradient(ellipse 47% 65% at 50% 52%, #518eac40 0%, #3a789528 32%, #28476619 59%, transparent 100%);
+}
+.atmosphere-preview .body-light-rays { opacity: .38; }
+.atmosphere-preview .body-light-floor {
+  width: 86%;
+  background: radial-gradient(ellipse, #9bdfeb38, #57879820 30%, #5a588211 55%, transparent 74%);
+}
+.atmosphere-preview .hero-copy { text-shadow: 0 2px 24px #03070d66; }
+.atmosphere-preview .story-section { isolation: isolate; }
+.atmosphere-preview .story-layout { position: relative; }
+.atmosphere-preview .story-section::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -80px;
+  left: -10vw;
+  right: -10vw;
+  height: calc(100% + 100px);
+  pointer-events: none;
+}
+.atmosphere-preview #perspective::before {
+  background:
+    radial-gradient(ellipse 41% 51% at 72% 50%, #487e9a27, transparent 80%),
+    radial-gradient(ellipse 58% 65% at 56% 57%, #223b5125, transparent 80%);
+}
+.atmosphere-preview #affiliates::before {
+  height: min(820px, 72%);
+  background:
+    radial-gradient(ellipse 31% 44% at 72% 70%, #b8915830, transparent 82%),
+    radial-gradient(ellipse 41% 57% at 68% 40%, #52839921, transparent 80%);
+}
+.atmosphere-preview .story-art { z-index: 1; }
+.ambient-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+  mix-blend-mode: screen;
+}
+.story-layout > .ambient-particles {
+  z-index: 0;
+  left: 43%;
+  width: 57%;
+  mask-image: radial-gradient(ellipse, #000 32%, transparent 77%);
+}
+@media (max-width: 760px) {
+  .atmosphere-preview .experience-ambient { opacity: .75; }
+  .atmosphere-preview .body-light-halo {
+    background:
+      radial-gradient(ellipse 18% 35% at 50% 50%, #bceeff3d, #76b9d222 48%, transparent 100%),
+      radial-gradient(ellipse 48% 65% at 50% 52%, #52889b36, #24475c20 43%, transparent 90%);
+  }
+  .atmosphere-preview .story-section::before { left: -25px; right: -25px; }
+  .atmosphere-preview #perspective::before {
+    background: radial-gradient(ellipse 66% 40% at 55% 71%, #487e9a2c, transparent 85%);
+  }
+  .atmosphere-preview #affiliates::before {
+    height: 830px;
+    background:
+      radial-gradient(ellipse 53% 28% at 66% 76%, #b8915824, transparent 86%),
+      radial-gradient(ellipse 67% 32% at 60% 60%, #52839920, transparent 83%);
+  }
+  .story-art > .ambient-particles { z-index: -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-particles { opacity: .7; }
+}
